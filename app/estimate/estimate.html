@@ -1,0 +1,23 @@
+<div class="jumbotron">
+  <h1>{{task.summary}}</h1>
+  <p style="white-space: pre;">{{task.description}}</p>
+  <p><a target="_blank" href="{{youtrackUrl}}/issue/{{task.id}}" class="btn btn-primary btn-lg" role="button">YouTrack</a></p>
+</div>
+<h2>Estimates</h2>
+<div class="developer" ng-repeat="developer in developers">
+  <div id="card" ng-class="{flipped: gotAllEstimates}">
+    <img class="gravatar" ng-class="{grayscale: estimates[developer.$id] == undefined}"
+         ng-src="http://www.gravatar.com/avatar/{{developer.md5}}?s=150&d=identicon"/>
+    <div class="estimate">{{(estimates[developer.$id]) || "&nbsp;"}}</div>
+  </div>
+  <br/>
+  <div class="developer-name">
+    {{developer.name}}
+  </div>
+</div>
+<div class="result" ng-class="{gotResult: gotAllEstimates}">
+  <h2>Result</h2>
+  Average estimate: {{averageEstimate}} hours<br/>
+  <br/>
+  <input type="text" ng-model="estimate"/><input type="button" value="Submit" ng-click="setEstimate(task, estimate)"/>
+</div>

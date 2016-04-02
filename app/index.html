@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html lang="en" ng-app="scrumPoker" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html lang="en" ng-app="scrumPoker" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html lang="en" ng-app="scrumPoker" class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en" ng-app="scrumPoker" class="no-js"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Scrum Poker</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/normalize.css">
+  <link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/main.css">
+  <link rel="stylesheet" href="app.css">
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+  <!-- Optional theme -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+  <script src="bower_components/html5-boilerplate/dist/js/vendor/modernizr-2.8.3.min.js"></script>
+</head>
+<body>
+  <ul class="menu">
+    <li><a href="#/home">Scrum Master</a></li>
+    <li><a href="#/developer">Developer</a></li>
+    <li><a href="#/config/youtrack">YouTrack Config</a></li>
+    <li><a href="#/config/firebase">Firebase Config</a></li>
+  </ul>
+
+  <!--[if lt IE 7]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+  <![endif]-->
+<div class="container-fluid">
+  <div ng-view></div>
+</div>
+
+  <hr>
+  <div style="float: right; margin-right: 20px">v<span app-version></span></div>
+
+  <!-- In production use:
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/x.x.x/angular.min.js"></script>
+  -->
+  <script src="bower_components/angular/angular.js"></script>
+  <script src="bower_components/angular-local-storage/dist/angular-local-storage.js"></script>
+  <script src="bower_components/angular-route/angular-route.js"></script>
+  <script src="bower_components/angular-resource/angular-resource.js"></script>
+  <script src="bower_components/angularfire/dist/angularfire.js"></script>
+  <script src="bower_components/firebase/firebase.js"></script>
+  <script src="bower_components/lodash/dist/lodash.js"></script>
+  <script src="bower_components/SparkMD5/spark-md5.js"></script>
+  <script src="app.js"></script>
+  <script src="home/home.js"></script>
+  <script src="developer/developer.js"></script>
+  <script src="estimate/estimate.js"></script>
+  <script src="login/login.js"></script>
+  <script src="firebase/firebase.js"></script>
+  <script src="youtrack/youtrack.js"></script>
+  <script src="components/version/version.js"></script>
+  <script src="components/version/version-directive.js"></script>
+  <script src="components/version/interpolate-filter.js"></script>
+  <script src="components/youtrack/youtrack.js"></script>
+</body>
+</html>

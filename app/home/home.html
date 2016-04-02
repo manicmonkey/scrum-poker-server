@@ -1,0 +1,33 @@
+<h2>Sprints</h2>
+<div class="row">
+  <div class="col-sm-3" style="padding-left: 40px">
+    <label style="padding-top: 8px" for="sprintSelection">Selected sprint:</label>
+  </div>
+  <div class="col-sm-9">
+    <select id="sprintSelection"
+            class="form-control"
+            ng-model="selectedSprint.$value">
+      <option ng-repeat="sprint in sprints" value="{{sprint}}">Sprint {{sprint}}</option>
+    </select>
+  </div>
+</div>
+
+<h2>Developers</h2>
+<div style="padding-left: 30px">
+  <div class="checkbox" ng-repeat="user in users">
+    <label>
+      <input type="checkbox" ng-model="user.inSprint">
+      {{user.name}}
+    </label>
+  </div>
+</div>
+
+<h2>Tasks</h2>
+<ol>
+  <div ng-repeat="task in tasks">
+    <li><a href="{{youtrackUrl}}/issue/{{task.id}}" target="_blank">{{task.id}}</a> - {{task.field.summary.value}}
+      <button style="margin-top: -2px" type="button" ng-click="estimateTask(task.id)" class="btn btn-link">Estimate</button>
+    </li>
+  </div>
+</ol>
+<p ng-if="tasks.length == 0">No tasks left!</p>

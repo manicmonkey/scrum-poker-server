@@ -1,0 +1,114 @@
+/* app css stylesheet */
+
+.menu {
+    list-style: none;
+    border-bottom: 0.1em solid black;
+    margin-bottom: 2em;
+    padding: 0 0 0.5em;
+}
+
+.menu:before {
+    content: "[";
+}
+
+.menu:after {
+    content: "]";
+}
+
+.menu > li {
+    display: inline;
+}
+
+.menu > li:before {
+    content: "|";
+    padding-right: 0.3em;
+}
+
+.menu > li:nth-child(1):before {
+    content: "";
+    padding: 0;
+}
+
+.task {
+/*   background-color: cadetblue; */
+/*   font-size:large; */
+  padding: 10px;
+  border-radius: 15px;
+  border: 2px solid #2b81af;
+  margin-left: 20px;
+  display: inline-block;
+/*   text-align: end; */
+  
+}
+
+img.grayscale {
+    -webkit-filter: grayscale(90%);
+    filter: grayscale(90%);
+}
+
+div.developer {
+    border-radius: 25px;
+    border: 2px solid #2b81af;
+    padding: 10px;
+    display: inline-block;
+    margin-left: 20px;
+    perspective: 800px;
+}
+
+.loading {
+    width: 150px;
+    height: 150px;
+    background-color: grey;
+}
+
+#card {
+    transform-style: preserve-3d;
+    transition: transform 1s;
+}
+
+.flipped {
+    transform: rotateY(180deg);
+}
+
+.gravatar {
+    backface-visibility: hidden;
+}
+
+.estimate {
+    backface-visibility: hidden;
+    transform: rotateY(180deg);
+    margin-top: -165px;
+    margin-bottom: -30px;
+    font-size: 8em;
+    text-align: center;
+}
+
+.developer-name {
+    padding-top: 20px;
+    text-align: center;
+}
+
+.result {
+  opacity: 0;
+  visibility: hidden;
+  /* display: none; */
+}
+
+.gotResult {
+  opacity: 1;
+  visibility: visible;
+  transition: visibility 0s linear 1s, opacity 2s linear;
+}
+
+.result > input {
+  width: 100px;
+  margin-left: 10px;
+}
+
+.left-indent {
+    margin-left: 50px;
+}
+
+.full-width {
+    width: 100%
+}
