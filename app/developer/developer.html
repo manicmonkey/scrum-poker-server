@@ -1,10 +1,22 @@
-<h3>Please enter your details</h3>
+<img style="float: right" ng-src="http://www.gravatar.com/avatar/{{user.md5}}?s=150&d=identicon"/>
+<h1>Developer estimate</h1>
 <p>
-    <label for="username">What is your name?</label>
-    <input id="username" ng-model="username" type="text"/>
+  Hi {{user.name}}!
 </p>
-<p>
-    <label for="email">What is your email?</label>
-    <input id="email" ng-model="email" type="text"/>
+<p>Welcome to Sprint {{sprint.$value}} planning</p>
+<div ng-switch="{stage}">
+
+</div>
+<p ng-hide="gotTask()">
+  Please wait for a task to be chosen for estimation
 </p>
-<input ng-click="submit()" type="submit" value="Go!" />
+<div ng-show="waitingForEstimate()">
+  <p>
+    <label for="estimate">Please enter your estimate (in hours) for {{task.$value}}</label>
+    <input id="estimate" ng-model="pendingEstimate" type="number"/>
+  </p>
+  <input ng-disabled="pendingEstimate == undefined || pendingEstimate.length == 0" ng-click="submit()" type="submit" value="Submit"/>
+</div>
+<p ng-show="gotEstimate()">
+  Thank you for your estimate for {{task.$value}}. Please wait for the next task.
+</p>
