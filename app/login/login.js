@@ -13,7 +13,6 @@ angular.module('scrumPoker.login', ['ngRoute', 'firebase'])
     function ($rootScope, $scope, $location, firebase, md5) {
       $scope.login = function () {
         $rootScope.authObj.$authWithOAuthPopup("google", {
-          remember: "sessionOnly",
           scope: "email"
         }).then(function (authData) {
           console.log("Logged in as:", authData.uid);
