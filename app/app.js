@@ -10,8 +10,7 @@ angular.module('scrumPoker', [
   'scrumPoker.login',
   'scrumPoker.firebase.config',
   'scrumPoker.version',
-  'scrumPoker.youtrack.config',
-  'scrumPoker.youtrack.resource'
+  'scrumPoker.youtrack'
 ]).config(['$routeProvider', function ($routeProvider) {
   $routeProvider.otherwise({redirectTo: '/home'});
 }]).config(['$httpProvider', function ($httpProvider) {
