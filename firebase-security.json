@@ -1,0 +1,24 @@
+{
+  "rules": {
+    ".read": "auth != null",
+    "planning": {
+      "estimates": {
+        "$uid": {
+          ".write": "$uid === auth.uid",
+          ".validate": "newData.isNumber() && newData.val() >= 0 && newData.val() <= 100"
+        }
+      },
+      "sprint": {
+        ".write": "auth.email == 'j.w.baxter@gmail.com'"
+      },
+      "task": {
+        ".write": "auth.email == 'j.w.baxter@gmail.com'"
+      }
+    },
+    "users": {
+      "$uid": {
+        ".write": "auth != null && auth.uid == $uid"
+      }
+    }
+  }
+}
