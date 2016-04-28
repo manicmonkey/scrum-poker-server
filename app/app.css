@@ -52,6 +52,7 @@ div.developer {
     padding: 10px;
     display: inline-block;
     margin-left: 20px;
+    margin-bottom: 20px;
     perspective: 800px;
 }
 
