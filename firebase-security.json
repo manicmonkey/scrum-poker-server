@@ -8,17 +8,21 @@
           ".validate": "newData.isNumber() && newData.val() >= 0 && newData.val() <= 100"
         }
       },
+      "agileBoard": {
+        ".write": "root.child('permissions').child(auth.uid).child('admin').val() == true"
+      },
       "sprint": {
-        ".write": "auth.email == 'j.w.baxter@gmail.com'"
+        ".write": "root.child('permissions').child(auth.uid).child('admin').val() == true"
       },
       "task": {
-        ".write": "auth.email == 'j.w.baxter@gmail.com'"
+        ".write": "root.child('permissions').child(auth.uid).child('admin').val() == true"
       }
     },
     "users": {
       "$uid": {
-        ".write": "auth != null && auth.uid == $uid"
-      }
+        ".write": "auth.uid == $uid || root.child('permissions').child(auth.uid).child('admin').val() == true"
+      },
+      ".write": "root.child('permissions').child(auth.uid).child('admin').val() == true"
     }
   }
 }

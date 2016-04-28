@@ -2,6 +2,11 @@
 
 ```json
 {
+    permissions: {
+        uid-1: {
+            admin: true
+        }
+    },
     planning: {
         estimates: {
             uid-1: 8,
