@@ -44,6 +44,7 @@ angular.module('scrumPoker.youtrack', ['ngResource'])
 
   .factory('Authentication', ['$resource', 'youtrackConfig',
     function ($resource, youtrackConfig) {
+      //todo put these values in form data
       return $resource(youtrackConfig.url + '/rest/user/login', null, {
         login: {
           method: 'POST',
@@ -77,18 +78,28 @@ angular.module('scrumPoker.youtrack', ['ngResource'])
         }
       });
     }
+  ])
+
+  .factory('AgileBoard', ['$resource', 'youtrackConfig',
+    function ($resource, youtrackConfig) {
+      return $resource(youtrackConfig.url + '/rest/admin/agile');
+    }
   ]);
 
+//todo use the agile board rest api to lookup boards/tasks
+
 //todo finish this off
-// .factory('Bundle', ['$resource', 'youtrackConfig',
+// .
+// factory('Bundle', ['$resource', 'youtrackConfig',
 //   function ($resource, youtrackConfig) {
 //     $resource(youtrackConfig.url + '/rest/admin/project/:project/customfield').get({
 //       project: youtrackConfig.project
-//     }, function(resp) {
-//       var sprintField = resp.filter(x -> x.name == 'sprint')
-//       $resource(sprintField.url).get(function(resp) {
-//         resp.param[0].value;
+//     }, {}).$promise
+//       .then(function (resp) {
+//         var sprintField = resp.filter(x - > x.name == 'sprint');
+//         return $resource(sprintField.url).get(function (resp) {
+//           return resp.param[0].value;
+//         }).$promise;
 //       });
-//     });
 //     return $resource(youtrackConfig.url + '/rest/admin/project/:project/customfield', {}, {});
 //   }])

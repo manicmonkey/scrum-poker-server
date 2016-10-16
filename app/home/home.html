@@ -1,3 +1,17 @@
+<h2>Agile board</h2>
+<div class="row">
+  <div class="col-sm-3" style="padding-left: 40px">
+    <label style="padding-top: 8px" for="agileBoardSelection">Selected Agile Board:</label>
+  </div>
+  <div class="col-sm-9">
+    <select id="agileBoardSelection"
+            class="form-control"
+            ng-model="selectedAgileBoard.$value">
+      <option ng-repeat="agileBoard in agileBoards" value="{{agileBoard.id}}">{{agileBoard.name}}</option>
+    </select>
+  </div>
+</div>
+
 <h2>Sprints</h2>
 <div class="row">
   <div class="col-sm-3" style="padding-left: 40px">
@@ -7,7 +21,7 @@
     <select id="sprintSelection"
             class="form-control"
             ng-model="selectedSprint.$value">
-      <option ng-repeat="sprint in sprints" value="{{sprint}}">Sprint {{sprint}}</option>
+      <option ng-repeat="sprint in sprints" value="{{sprint.version}}">Sprint: {{sprint.version}}</option>
     </select>
   </div>
 </div>
