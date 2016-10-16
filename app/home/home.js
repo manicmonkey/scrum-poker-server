@@ -35,7 +35,7 @@ angular.module('scrumPoker.home', ['ngRoute', 'firebase'])
       }
 
       function loadTasks(sprint) {
-        Tasks.getByProject({project: youtrackConfig.project, filter: 'Sprint: ' + sprint + ' Estimation: ?'}, function (resp) {
+        Tasks.getByProject({project: youtrackConfig.project, filter: 'Sprints: {' + sprint + '} Ideal days: {Not estimated}'}, function (resp) {
           $scope.tasks = _.map(resp, function (task) {
             task.field = _.keyBy(task.field, function (field) {
               return field.name;
