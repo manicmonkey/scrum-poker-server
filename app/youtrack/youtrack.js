@@ -22,7 +22,6 @@ angular.module('scrumPoker.youtrack', ['ngResource'])
     if (youtrack == undefined) {
       youtrack = {
         url: '',
-        project: '',
         username: '',
         password: ''
       };
@@ -30,17 +29,6 @@ angular.module('scrumPoker.youtrack', ['ngResource'])
     }
     return youtrack;
   }])
-
-  .factory('Projects', ['$resource', 'youtrackConfig',
-    function ($resource, youtrackConfig) {
-      return $resource(youtrackConfig.url + '/rest/project/all', {}, {
-        query: {
-          method: 'GET',
-          isArray: true
-        }
-      });
-    }]
-  )
 
   .factory('Authentication', ['$resource', 'youtrackConfig',
     function ($resource, youtrackConfig) {

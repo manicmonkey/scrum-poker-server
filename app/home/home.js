@@ -9,8 +9,8 @@ angular.module('scrumPoker.home', ['ngRoute', 'firebase'])
     });
   }])
 
-  .controller('HomeCtrl', ['$q', '$scope', '$resource', '$location', 'firebase', '$firebaseObject', 'youtrackConfig', 'AgileBoard', 'Projects', 'Tasks', 'Sprints', 'Authentication',
-    function ($q, $scope, $resource, $location, firebase, $firebaseObject, youtrackConfig, AgileBoard, Projects, Tasks, Sprints, Authentication) {
+  .controller('HomeCtrl', ['$q', '$scope', '$resource', '$location', 'firebase', '$firebaseObject', 'youtrackConfig', 'AgileBoard', 'Tasks', 'Sprints', 'Authentication',
+    function ($q, $scope, $resource, $location, firebase, $firebaseObject, youtrackConfig, AgileBoard, Tasks, Sprints, Authentication) {
 
       function loadAgileBoard(agileBoard) {
         //update sprints
