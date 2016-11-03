@@ -1,0 +1,8 @@
+pipeline:
+  build:
+    image: node:7
+    commands:
+      - npm install -g bower
+      - bower install --allow-root
+      - npm install -g firebase-tools
+      - firebase deploy --token "$FIREBASE_TOKEN" --project $FIREBASE_PROJECT
