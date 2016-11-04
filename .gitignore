@@ -29,7 +29,5 @@ node_modules
 # Bower output
 bower_components/
 
-firebase.json
-
 # IntelliJ project files
 .idea
