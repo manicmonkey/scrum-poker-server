@@ -7,3 +7,5 @@ The application is implemented as an Angular SPA which uses firebase to synchron
 This project is based on an application skeleton for a typical [AngularJS](http://angularjs.org/) web app. The original skeleton is [available here](https://github.com/angular/angular-seed).
 
 There is an awesome Android app which will be made available...
+
+[![Build Status](https://drone.antarcticgames.co.uk/api/badges/manicmonkey/scrum-poker-server/status.svg)](https://drone.antarcticgames.co.uk/manicmonkey/scrum-poker-server)
