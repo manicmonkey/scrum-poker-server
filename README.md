@@ -5,3 +5,5 @@ The scrum-poker-server application is a webapp which can be used to list and est
 The application is implemented as an Angular SPA which uses firebase to synchronize state across Scrum Master and Developer sessions. Firebase provide [hosting](https://www.firebase.com/docs/hosting/) so you can deploy the webapp directly to the firebase servers by using the *firebase-tool* which is installed through npm. This avoids the need to run any internal infrastructure.
 
 This project is based on an application skeleton for a typical [AngularJS](http://angularjs.org/) web app. The original skeleton is [available here](https://github.com/angular/angular-seed).
+
+There is an Android app which will be made available...
