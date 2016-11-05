@@ -42,16 +42,6 @@ angular.module('scrumPoker.youtrack', ['ngResource'])
     }
   ])
 
-  .factory('Sprints', ['$resource', 'youtrackConfig',
-    function ($resource, youtrackConfig) {
-      return $resource(youtrackConfig.url + '/rest/admin/customfield/versionBundle/:bundleName', null, {
-        query: {
-          method: 'GET',
-          withCredentials: true
-        }
-      });
-    }])
-
   .factory('Tasks', ['$resource', 'youtrackConfig',
     function ($resource, youtrackConfig) {
       return $resource(youtrackConfig.url + '/rest/issue/:issueId', {}, {
@@ -75,19 +65,3 @@ angular.module('scrumPoker.youtrack', ['ngResource'])
   ]);
 
 //todo use the agile board rest api to lookup boards/tasks
-
-//todo finish this off
-// .
-// factory('Bundle', ['$resource', 'youtrackConfig',
-//   function ($resource, youtrackConfig) {
-//     $resource(youtrackConfig.url + '/rest/admin/project/:project/customfield').get({
-//       project: youtrackConfig.project
-//     }, {}).$promise
-//       .then(function (resp) {
-//         var sprintField = resp.filter(x - > x.name == 'sprint');
-//         return $resource(sprintField.url).get(function (resp) {
-//           return resp.param[0].value;
-//         }).$promise;
-//       });
-//     return $resource(youtrackConfig.url + '/rest/admin/project/:project/customfield', {}, {});
-//   }])

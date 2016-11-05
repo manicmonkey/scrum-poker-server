@@ -9,8 +9,8 @@ angular.module('scrumPoker.home', ['ngRoute', 'firebase'])
     });
   }])
 
-  .controller('HomeCtrl', ['$q', '$scope', '$resource', '$location', 'firebase', '$firebaseObject', 'youtrackConfig', 'AgileBoard', 'Tasks', 'Sprints', 'Authentication',
-    function ($q, $scope, $resource, $location, firebase, $firebaseObject, youtrackConfig, AgileBoard, Tasks, Sprints, Authentication) {
+  .controller('HomeCtrl', ['$q', '$scope', '$resource', '$location', 'firebase', '$firebaseObject', 'youtrackConfig', 'AgileBoard', 'Tasks', 'Authentication',
+    function ($q, $scope, $resource, $location, firebase, $firebaseObject, youtrackConfig, AgileBoard, Tasks, Authentication) {
 
       function loadAgileBoard(agileBoard) {
         //update sprints
@@ -28,9 +28,6 @@ angular.module('scrumPoker.home', ['ngRoute', 'firebase'])
           $scope.sprints = sprints;
         });
 
-        // Sprints.query({bundleName: youtrackConfig.bundle}, function (resp) {
-        //   $scope.sprints = _.map(_.filter(resp.version, ['archived', false]), 'value');
-        // });
         //update tasks
       }
 
