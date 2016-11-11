@@ -8,4 +8,4 @@ This project is based on an application skeleton for a typical [AngularJS](http:
 
 There is an awesome Android app which will be made available...
 
-[![Build Status](https://drone.antarcticgames.co.uk/api/badges/manicmonkey/scrum-poker-server/status.svg)](https://drone.antarcticgames.co.uk/manicmonkey/scrum-poker-server)
+[![Build Status](https://drone.antarcticgames.co.uk/api/badges/james_baxter/scrum-poker-server/status.svg)](https://drone.antarcticgames.co.uk/james_baxter/scrum-poker-server)
